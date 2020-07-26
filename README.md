@@ -8,10 +8,10 @@ This project relies on:
 
 ### Libraries:
 - [Adafruit ESP8266](https://github.com/adafruit/Adafruit_ESP8266) (In IDE)
-- [Arduino JSON](https://github.com/bblanchon/ArduinoJson/tree/5.x) (Note version 5.x) (In IDE)
+- [Arduino JSON](https://github.com/bblanchon/ArduinoJson/tree/5.x)  (In IDE) (Note version 5.x)
 - [DHTesp](https://github.com/beegee-tokyo/DHTesp) (In IDE)
 - [NTPClient](https://github.com/arduino-libraries/NTPClient) (In IDE)
 - [TelnetStream](https://github.com/jandrassy/TelnetStream) (In IDE)
 
 ### Board
-Requires the Esp8266 board from http://arduino.esp8266.com/stable/package_esp8266com_index.json
+Add http://arduino.esp8266.com/stable/package_esp8266com_index.json to the "Additional Board Manager URLs" in the Arduino IDE, then add the esp8266 from inside the board manager.
