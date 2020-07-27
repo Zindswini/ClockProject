@@ -124,11 +124,12 @@ void loop() {
   shiftMode(mode);
   pulse(LATCH);
 
+  //handle Night vs Day framerate
   if(brightness < 1024){
-    delay(500);
+    delay(1000);
   }
   else{
-  delay(50);
+  delay(20);
   }
   }
 
@@ -143,6 +144,8 @@ void shifterOut(int hr, int mn, int sec, int mode)
       locHr = hr + utcOffsetInHours;
       if(locHr < 0){ locHr += 24; }
       else if(locHr > 24) { locHr -= 24; }
+
+      if(twelvehr && locHr > 12){ locHr -= 12; }
       
       //Shift hour, minute, second
       shiftNumber(locHr);
@@ -152,6 +155,8 @@ void shifterOut(int hr, int mn, int sec, int mode)
       break;
 
     case 1: //UST time
+      if(twelvehr && hr > 12){ hr -= 12; }
+      
       shiftNumber(hr);
       shiftNumber(mn);
       shiftNumber(round(sec + timeOffset));
@@ -214,6 +219,7 @@ void shiftEmpty()
   digitalWrite(DATAOUT, LOW);
   for(int i = 0; i < 8; i++) { pulse(CLOCK); }
 }
+
 //Two digits max (duh)
 void shiftNumber(int num)
 {
@@ -332,8 +338,7 @@ void fade()
   if(brightness < 1024)
   {
     //change mode
-    mode++;
-    if(mode > 4) { mode=0; }
+    changeMode();
   
     shifterOut(timeClient.getHours(),timeClient.getMinutes(),timeClient.getSeconds(),mode);
     shiftMode(mode);
@@ -350,6 +355,22 @@ void fade()
     yield();
   }
   
+  changeMode();
+  
+  //fade in
+  while(fadebrightness < brightness / 2)
+  {
+    fadebrightness += 1;
+    analogWrite(ENABLE, 1024 - (fadebrightness * 2));
+    delay(((fadeTime / 2) / brightness) * 10000);
+    yield();
+  }
+  }
+  switched = false;
+}
+
+void changeMode()
+{
   //change mode
   mode++;
   if(mode > 4) { mode=0; }
@@ -368,16 +389,4 @@ void fade()
   shifterOut(timeClient.getHours(),timeClient.getMinutes(),timeClient.getSeconds(),mode);
   shiftMode(mode);
   pulse(LATCH);
-  
-  
-  //fade in
-  while(fadebrightness < brightness / 2)
-  {
-    fadebrightness += 1;
-    analogWrite(ENABLE, 1024 - (fadebrightness * 2));
-    delay(((fadeTime / 2) / brightness) * 10000);
-    yield();
-  }
-  }
-  switched = false;
 }
