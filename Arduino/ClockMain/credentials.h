@@ -9,7 +9,8 @@
 const char* host = "api.openweathermap.org";
 const int httpsPort = 443;
 const char* url = "/data/2.5/weather";
-const char* openweathermapunits = "metric"; // Celsius
+const char* openweathermapid = "4718711";
+const char* openweathermapq = "pflugerville";
 const char* openweathermapunits = "metric"; //Don't touch
 
 #define twelvehr false
