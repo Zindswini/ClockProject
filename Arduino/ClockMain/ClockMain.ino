@@ -83,6 +83,18 @@ void setup() {
 
 void loop() {
   //handle weather clock, brightness data updating
+  
+  /* //Handle mode switching
+  if(timeClient.getSeconds() % timePer == 0)
+  {
+    if(switched == false){
+      fade();
+      switched = true;
+    }
+  }
+  else if(switched == true) { switched = false; }
+  */
+  
   if(timeClient.getSeconds() % 30 == 0 && switched == false) 
   {
     downloadData();
@@ -98,16 +110,6 @@ void loop() {
     localHumidity = dht.getHumidity();
     localHumidity = constrain(localHumidity,0,999);
   }
-
-  //Handle mode switching
-  if(timeClient.getSeconds() % timePer == 0)
-  {
-    if(switched == false){
-      fade();
-      switched = true;
-    }
-  }
-  else if(switched == true) { switched = false; }
   
   //update brightness and tick
   brightness = updateBrightness();
@@ -129,10 +131,10 @@ void loop() {
     delay(1000);
   }
   else{
-  delay(20);
-  }
+  delay(50);
   }
 
+  }
 void shifterOut(int hr, int mn, int sec, int mode)
 {
   //clear,shiftChar, latch
@@ -342,6 +344,11 @@ void fade()
   
     shifterOut(timeClient.getHours(),timeClient.getMinutes(),timeClient.getSeconds(),mode);
     shiftMode(mode);
+    shifterOut(timeClient.getHours(),timeClient.getMinutes(),timeClient.getSeconds(),mode);
+    shiftMode(mode);
+    shifterOut(timeClient.getHours(),timeClient.getMinutes(),timeClient.getSeconds(),mode);
+    shiftMode(mode);
+    
     pulse(LATCH);
   }
   else{
@@ -377,10 +384,10 @@ void changeMode()
 
   //uncomment to disable UTC
   if(mode == 1) { mode++; }
-  
+  //uncomment to disable farenheit
+  //if(mode == 2) { mode++; }
   //uncomment to disable celsius
   if(mode == 3) { mode++; }
-
   //uncomment to disable humidity
   if(mode == 4) { mode++; }
   
