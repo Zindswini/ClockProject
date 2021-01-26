@@ -5,7 +5,7 @@ This is the GitHub Companion to the Large scale LED Clock as shown in https://yo
 
 # Design Files
 - 3D work was done in Autodesk Fusion 360, and files are provided as F3Z and STL files.
-- Circut Design was done in Autodesk Eagle, files are provided as Board and Schematic files.
+- Circuit Design was done in Autodesk Eagle, files are provided as Board and Schematic files.
 - Manufacturing was done through JLCPCB, and Gerber files are provided.
 
 # Arduino Dependencies
