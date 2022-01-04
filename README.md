@@ -1,7 +1,7 @@
 # ClockProject
 This is the GitHub Companion to the Large scale LED Clock as shown in https://youtu.be/gxohO7Plrmg
-![Thumbnail](https://github.com/Zindswini/ClockProject/blob/master/images/thumbnail.jpg?raw=true) 
-![TablePicture](https://github.com/Zindswini/ClockProject/blob/master/images/TablePicture.png?raw=true) ![Fusion Render](https://github.com/Zindswini/ClockProject/blob/master/images/fusionrender.png?raw=true)
+![Thumbnail](https://github.com/Zindswini/ClockProject/blob/v1.0/images/thumbnail.jpg?raw=true) 
+![TablePicture](https://github.com/Zindswini/ClockProject/blob/v1.0/images/TablePicture.png?raw=true) ![Fusion Render](https://github.com/Zindswini/ClockProject/blob/v1.0/images/fusionrender.png?raw=true)
 
 # Design Files
 - 3D work was done in Autodesk Fusion 360, and files are provided as F3Z and STL files.
