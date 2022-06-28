@@ -48,13 +48,7 @@
           "min_clearance": 0.508
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -118,16 +112,8 @@
         "solder_mask_min_width": 0.0,
         "use_height_for_length_calcs": true
       },
-      "track_widths": [
-        0.0,
-        1.5
-      ],
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        }
-      ],
+      "track_widths": [],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -347,7 +333,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Tick.kicad_pro",
+    "filename": "Display.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -407,7 +393,7 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "KiCad",
+    "net_format_name": "",
     "ngspice": {
       "fix_include_paths": true,
       "fix_passive_vals": false,
@@ -426,7 +412,7 @@
   },
   "sheets": [
     [
-      "a3495ca6-bb0d-4a88-910a-7a0a1e447d21",
+      "2d9f33ee-8375-4aee-afe7-a6e073bed60b",
       ""
     ]
   ],

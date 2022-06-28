@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "RGBClock")(type "KiCad")(uri "/home/bailey/Documents/GitHub/ClockProject/cad/PCBs")(options "")(descr ""))
+)
