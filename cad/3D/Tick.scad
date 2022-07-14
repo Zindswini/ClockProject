@@ -1,5 +1,5 @@
 $fn=15;
-panel_Height=300;
+panel_Height=160;
 
 // Derived Variables
 grid = panel_Height / 16;
@@ -8,7 +8,7 @@ panel_Width=grid*10;
 
 //Led spacing parameters
 led_side_width=6;
-led_depth=4;
+led_package_depth=4;
 
 //Chamber Parameters
 circle_diameter=grid*1.65;
@@ -28,14 +28,15 @@ bridging_padding = 1;
 
 chanfer = 5;
 
-pcb_width = grid / 2;
-pcb_depth = 1.6;
+pcb_depth = 3;
+
+led_depth = led_package_depth + pcb_depth;
 
 //Show/hide elements
 led_layer = true;
-chamber = true;
-bridge_helpers = true;
-diffuse_layer = true;
+chamber = false;
+bridge_helpers = false;
+diffuse_layer = false;
 
 pcb_mode = false;
 
@@ -63,7 +64,7 @@ g = [5 * grid, 8 * grid, 0];
 
 points = [a, b, c, d, e, f, g];
 
-difference(){
+render() difference(){
     union(){
         //Led Layer
         if (led_layer) difference() {
@@ -99,7 +100,7 @@ difference(){
         }
     }
 
-    //Screw Holes
+    //Corner Screw Holes
     screw([screw_distance, screw_distance, 0]);
     screw([panel_Width - screw_distance, panel_Height - screw_distance,0]);
     screw([panel_Width - screw_distance,screw_distance,0]);
@@ -107,24 +108,66 @@ difference(){
 
     side_chanfer([0,0,0], 0);
     side_chanfer([panel_Width, panel_Height-chanfer-chanfer, 0], 180);
+
+    //PCB Slots
+    if (!pcb_mode){
+        pcb_link(f, 45);
+        pcb_link(a, -45);
+        pcb_link(b, 225);
+        pcb_link(g, 225);
+        pcb_link(e, -45);
+        pcb_link(d, 45);
+
+        //pcb_link(f + [10,10,0], -45);
+    }
 }
 
-if (!pcb_mode){
-    pcb_link(f, 45);
-    pcb_link(a, -45);
-    pcb_link(b, 225);
-    pcb_link(g, 225);
-    pcb_link(e, -45);
-    pcb_link(d, 45);
-}
-
+pcb_edge_right([0*grid, 8*grid, -pcb_depth]);
+//pcb_edge_left([0,0,0]);
 
 module pcb_link(position, zAngle, profile=false){
-    if(!profile) { linear_extrude(pcb_depth) pcb_profile(position, zAngle); }
+    if(!profile) { union(){
+        linear_extrude(pcb_depth) pcb_profile(position, zAngle);
+        translate(position) rotate([0,0,zAngle])screw([distance_formula(a,b)/2, 0, 0]);
+    }}
     else { pcb_profile(position, zAngle); }
 }
 
+module pcb_edge_left(position, zAngle=0, profile=false){
+    if(!profile) { union(){
+        linear_extrude(pcb_depth) pcb_profile_left(position, zAngle);
+        translate(position) rotate([0,0,zAngle])screw([distance_formula(a,b)/2, 0, 0]);
+    }}
+    else { pcb_profile_left(position, zAngle); }
+}
+
+module pcb_edge_right(position, zAngle=0, profile=false){
+    if(!profile) { union(){
+        translate(position) linear_extrude(pcb_depth) pcb_profile_right([0,0,0], zAngle);
+        translate(position) rotate([0,0,zAngle])screw([distance_formula(a,b)/2, 0, 0]);
+    }}
+    else { pcb_profile_right(position, zAngle); }
+}
+
 module pcb_profile(position, zAngle){
+    pcb_grid = grid/3;
+    distance = distance_formula(a,b) - (2*pcb_grid);
+    translate(position) rotate([0,0,zAngle + 180]) difference(){
+        polygon(points=[
+            [2*pcb_grid, 1*pcb_grid],
+            [1*pcb_grid, 2*pcb_grid],
+            [-distance + 1*pcb_grid, 2*pcb_grid],
+            [-distance, 1*pcb_grid],
+            [-distance, -1*pcb_grid],
+            [-distance + 1*pcb_grid, -2*pcb_grid],
+            [1*pcb_grid, -2*pcb_grid],
+            [2*pcb_grid, -1*pcb_grid]
+        ]);
+        if(pcb_mode){ translate([distance_formula(a,b)/2, 0, 0]) circle(screw_diameter/2); }
+    }
+}
+
+module pcb_profile_left(position, zAngle){
     pcb_grid = pcb_width/2;
     translate(position) rotate([0,0,zAngle]) difference(){
         hull(){
@@ -135,7 +178,23 @@ module pcb_profile(position, zAngle){
     }
 }
 
-// Fillet
+module pcb_profile_right(position, zAngle){
+    pcb_grid = grid/2;
+    translate(position) rotate([0,0,zAngle]) {
+        translate([0,0,0]) rotate([0,0,0]) polygon(points=[
+            [0,pcb_grid],
+            [pcb_grid, 2*pcb_grid],
+            [pcb_grid, 4*pcb_grid],
+            [2*pcb_grid, 5*pcb_grid],
+            [3*pcb_grid, 4*pcb_grid],
+            [3*pcb_grid, 0],
+            [2*pcb_grid, -pcb_grid],
+            [0,-pcb_grid]
+            ]);
+        translate([distance_formula(a,b)/2, 0, 0]) circle(screw_diameter/2);
+    }
+}
+
 module side_chanfer(position, rotation) {
     total_height = led_depth+chamber_depth+diffuse_depth;
     translate(position + [0,chanfer,total_height - chanfer]) rotate([90,0,90+rotation]) { linear_extrude(height=panel_Width)
@@ -186,3 +245,4 @@ module sector(radius, angles) {
 }
 
 function distance_formula(a,b) = sqrt( (b[0] - a[0])^2 + (b[1] - a[1])^2 );
+
