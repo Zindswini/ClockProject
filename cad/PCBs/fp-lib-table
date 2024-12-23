@@ -1,0 +1,7 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Module_RaspberryPi_Pico")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/ki-lime-pi-pico/Module_RaspberryPi_Pico.pretty")(options "")(descr ""))
+  (lib (name "TYPE-C-31-M-12")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/TYPE-C-31-M-12")(options "")(descr ""))
+  (lib (name "BH1750FVI-TR")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/BH1750FVI-TR")(options "")(descr ""))
+  (lib (name "SZ720788W")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/SZ720788W.pretty")(options "")(descr ""))
+)
