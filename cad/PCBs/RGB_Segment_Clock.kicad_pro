@@ -676,6 +676,14 @@
     [
       "ed587898-e8d3-4352-a1c6-fded2f4d578c",
       "Digit"
+    ],
+    [
+      "eb13df96-06e0-43ba-9d27-6864b5d57cbf",
+      "Tick"
+    ],
+    [
+      "ddbd17b6-28a0-495f-a062-2182329bea65",
+      "Controller"
     ]
   ],
   "text_variables": {}
