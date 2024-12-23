@@ -4,4 +4,5 @@
   (lib (name "TYPE-C-31-M-12")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/TYPE-C-31-M-12/TYPE-C-31-M-12.kicad_sym")(options "")(descr ""))
   (lib (name "BH1750FVI-TR")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/BH1750FVI-TR/BH1750FVI-TR.kicad_sym")(options "")(descr ""))
   (lib (name "SZ720788W-64")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/SZ720788W/SZ720788W-64.kicad_sym")(options "")(descr ""))
+  (lib (name "HT16K33")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/HT16K33/HT16K33.kicad_sym")(options "")(descr ""))
 )
