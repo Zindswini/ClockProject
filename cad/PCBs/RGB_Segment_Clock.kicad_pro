@@ -734,6 +734,10 @@
     [
       "ddbd17b6-28a0-495f-a062-2182329bea65",
       "Controller"
+    ],
+    [
+      "b0c91e5a-0bd4-4913-b516-e38645e2671a",
+      "USB_Power"
     ]
   ],
   "text_variables": {}

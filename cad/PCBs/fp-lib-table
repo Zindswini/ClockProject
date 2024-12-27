@@ -5,4 +5,6 @@
   (lib (name "BH1750FVI-TR")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/BH1750FVI-TR")(options "")(descr ""))
   (lib (name "SZ720788W")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/SZ720788W.pretty")(options "")(descr ""))
   (lib (name "HT16K33")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/HT16K33")(options "")(descr ""))
+  (lib (name "ESDA25W")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/ESDA25W")(options "")(descr ""))
+  (lib (name "ESDA25P35-1U1M")(type "KiCad")(uri "${KIPRJMOD}/project-libraries/ESDA25P35-1U1M")(options "")(descr ""))
 )
