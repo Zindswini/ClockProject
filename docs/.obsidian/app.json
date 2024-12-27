@@ -1,4 +1,7 @@
 {
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "newFileLocation": "current",
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true
 }
