@@ -8,9 +8,49 @@
 		(title "RGB Clock Assembly")
 	)
 	(lib_symbols)
+	(wire
+		(pts
+			(xy 82.55 80.01) (xy 100.33 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ff92505-a36a-4ac1-8352-80ffcb1a76f0")
+	)
+	(wire
+		(pts
+			(xy 82.55 88.9) (xy 100.33 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "812bb407-bb93-4a3d-a3ae-4026b0ede278")
+	)
+	(wire
+		(pts
+			(xy 82.55 86.36) (xy 100.33 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c15f6cf8-f083-4c7c-a62a-6afaae02d96c")
+	)
+	(wire
+		(pts
+			(xy 82.55 77.47) (xy 100.33 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1fff3ef-b47b-4a11-b9f7-a17ed0b23844")
+	)
 	(sheet
-		(at 34.29 64.77)
-		(size 40.64 48.26)
+		(at 66.04 74.93)
+		(size 16.51 17.78)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -21,7 +61,7 @@
 		)
 		(uuid "ddbd17b6-28a0-495f-a062-2182329bea65")
 		(property "Sheetname" "Controller"
-			(at 34.29 64.0584 0)
+			(at 66.04 74.2184 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30,13 +70,53 @@
 			)
 		)
 		(property "Sheetfile" "Controller/Controller.kicad_sch"
-			(at 34.29 113.6146 0)
+			(at 66.04 93.2946 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
+		)
+		(pin "DIGIT_OUT" input
+			(at 82.55 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "604dabf7-5dc3-4194-b1ad-ee5d83f4dbb2")
+		)
+		(pin "BL_OUT" input
+			(at 82.55 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "4e5c2f9d-b446-40d3-b7a4-9e13ed08bd7c")
+		)
+		(pin "VCC_OUT" input
+			(at 82.55 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "0453baf0-6602-4b59-9ae3-15fcc0b64c65")
+		)
+		(pin "GND_OUT" input
+			(at 82.55 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c8a6a4d7-6e80-4dee-b70f-7097e6272192")
 		)
 		(instances
 			(project "RGB_Segment_Clock"
@@ -47,8 +127,8 @@
 		)
 	)
 	(sheet
-		(at 153.67 77.47)
-		(size 20.32 31.75)
+		(at 134.62 74.93)
+		(size 25.4 16.51)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -59,7 +139,7 @@
 		)
 		(uuid "eb13df96-06e0-43ba-9d27-6864b5d57cbf")
 		(property "Sheetname" "Tick"
-			(at 153.67 76.7584 0)
+			(at 134.62 74.2184 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -68,7 +148,7 @@
 			)
 		)
 		(property "Sheetfile" "Tick/Tick.kicad_sch"
-			(at 153.67 109.8046 0)
+			(at 134.62 92.0246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
