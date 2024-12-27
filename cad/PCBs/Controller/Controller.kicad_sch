@@ -837,127 +837,6 @@
 				)
 			)
 		)
-		(symbol "Device:R"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:R_Small_US"
 			(pin_numbers hide)
 			(pin_names
@@ -5005,7 +4884,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 162.56) (xy 35.56 162.56)
+			(xy 35.56 162.56) (xy 38.1 162.56)
 		)
 		(stroke
 			(width 0)
@@ -6305,6 +6184,7 @@
 	)
 	(label "MATRIX_SDA"
 		(at 204.47 120.65 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6326,6 +6206,7 @@
 	)
 	(label "MATRIX_SCL"
 		(at 204.47 123.19 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6369,6 +6250,7 @@
 	)
 	(label "MATRIX_SDA"
 		(at 99.06 72.39 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6401,6 +6283,7 @@
 	)
 	(label "MATRIX_SCL"
 		(at 99.06 74.93 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6693,73 +6576,6 @@
 			(project "RGB_Segment_Clock"
 				(path "/40bfd19c-28ae-4125-bffd-c1ba01268b82/ddbd17b6-28a0-495f-a062-2182329bea65"
 					(reference "USB1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 39.37 162.56 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "139d2b94-b6e5-4e89-a06b-3238e62dee16")
-		(property "Reference" "R1"
-			(at 39.37 157.734 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "5.1k"
-			(at 39.37 160.274 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_2010_5025Metric"
-			(at 39.37 164.338 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 39.37 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 39.37 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e610610d-4cb6-47f8-a80e-92c973fdff1e")
-		)
-		(pin "2"
-			(uuid "58067934-4f89-492f-a9f3-0bb180c45ff6")
-		)
-		(instances
-			(project "RGB_Segment_Clock"
-				(path "/40bfd19c-28ae-4125-bffd-c1ba01268b82/ddbd17b6-28a0-495f-a062-2182329bea65"
-					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -8403,10 +8219,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "d501b6a2-7cc7-49a9-87e5-596226be7f4c")
+			(uuid "d501b6a2-7cc7-49a9-87e5-596226be7f4d")
 		)
 		(pin "1"
-			(uuid "e7023482-b714-45c9-bb8f-7632fd8da237")
+			(uuid "e7023482-b714-45c9-bb8f-7632fd8da238")
 		)
 		(instances
 			(project ""
@@ -8442,7 +8258,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_2010_5025Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 88.9 170.18 0)
 			(effects
 				(font
@@ -8785,7 +8601,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 33.02 162.56 270)
+		(at 35.56 162.56 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8794,7 +8610,7 @@
 		(fields_autoplaced yes)
 		(uuid "bb7de755-25d5-43a9-98c4-3d21418a212c")
 		(property "Reference" "#PWR01"
-			(at 26.67 162.56 0)
+			(at 29.21 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8803,7 +8619,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 29.21 162.5599 90)
+			(at 31.75 162.5599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8812,7 +8628,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 33.02 162.56 0)
+			(at 35.56 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8821,7 +8637,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 162.56 0)
+			(at 35.56 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8830,7 +8646,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 33.02 162.56 0)
+			(at 35.56 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9615,6 +9431,73 @@
 			(project "RGB_Segment_Clock"
 				(path "/40bfd19c-28ae-4125-bffd-c1ba01268b82/ddbd17b6-28a0-495f-a062-2182329bea65"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 40.64 162.56 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dba1ed0d-7d7c-43c4-9b51-556bc6af5721")
+		(property "Reference" "R1"
+			(at 40.64 157.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 40.64 160.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 40.64 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 40.64 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 40.64 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "05418def-d5e4-4d1f-8bc7-11b21668c744")
+		)
+		(pin "2"
+			(uuid "60858f44-27be-407b-8d81-001b8ca3cd1b")
+		)
+		(instances
+			(project "RGB_Segment_Clock"
+				(path "/40bfd19c-28ae-4125-bffd-c1ba01268b82/ddbd17b6-28a0-495f-a062-2182329bea65"
+					(reference "R1")
 					(unit 1)
 				)
 			)
