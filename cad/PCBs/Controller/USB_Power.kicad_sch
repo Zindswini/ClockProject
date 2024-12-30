@@ -1741,6 +1741,16 @@
 		)
 		(uuid "a8845dbd-207d-4d7b-872f-d9618997733c")
 	)
+	(label "USB_VBUS"
+		(at 80.01 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a90beaf9-5316-4e22-8bd4-ba1bfc5398dc")
+	)
 	(label "CC1"
 		(at 33.02 57.15 90)
 		(effects
