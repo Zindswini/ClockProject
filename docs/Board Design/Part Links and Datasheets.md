@@ -26,3 +26,6 @@ I can't redistribute the PDFs, so I am just linking to them here. Consider this 
 	- Double check footprint in KiCad library matches
 - [TVS Diode (ESDA25P35)](https://www.lcsc.com/product-detail/ESD-and-Surge-Protection-TVS-ESD_TECH-PUBLIC-ESDA25P35-1U1M_C19829649.html)
 	- [Datasheet](https://www.lcsc.com/datasheet/lcsc_datasheet_2411121028_TECH-PUBLIC-ESDA25P35-1U1M_C19829649.pdf)
+- [Power MOSFET (STL6P3LLH6)](https://www.lcsc.com/product-detail/MOSFETs_HXY-MOSFET-STL6P3LLH6-HXY_C22366875.html)
+	- [Datasheet](https://www.st.com/resource/en/datasheet/stl6p3llh6.pdf)
+	- [Product Page](https://www.st.com/en/power-transistors/stl6p3llh6.html)
